@@ -1,0 +1,17 @@
+.card__section {
+  padding: 1em;
+  overflow: hidden;
+}
+
+.card__section + .card__section {
+  border-top: 1px solid var(--grey-base);
+}
+
+.card__section--subdued {
+  background-color: var(--grey-light);
+}
+
+.card__section--shallow {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}

@@ -1,0 +1,49 @@
+$thumbnail-sizes: (
+  small: 4em,
+  medium: 6em,
+  large: 8em,
+);
+
+.thumbnail,
+.thumbnail::after {
+  position: relative;
+  display: block;
+  border-radius: var(--border-radius);
+}
+
+.thumbnail {
+  min-width: 4rem;
+  max-width: 100%;
+  overflow: hidden;
+  background: var(--white);
+
+  &::after {
+    padding-bottom: 100%;
+    content: "";
+    border: 1px solid var(--grey-dark);
+  }
+
+  &.thumbnail--size-small {
+    width: map-get($thumbnail-sizes, small);
+  }
+
+  &.thumbnail--size-medium {
+    width: map-get($thumbnail-sizes, medium);
+  }
+
+  &.thumbnail--size-large {
+    width: map-get($thumbnail-sizes, large);
+  }
+}
+
+.thumbnail img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}

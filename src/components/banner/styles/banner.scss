@@ -1,0 +1,49 @@
+.banner {
+  position: relative;
+  display: flex;
+  padding: 1.5em;
+  margin-bottom: 1em;
+  background-color: var(--grey-lightest);
+  border: 1px solid var(--ink-lightest);
+  border-top-color: var(--blue);
+  border-top-width: 3px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.075);
+
+  &.banner--status-success {
+    background-color: var(--green-light);
+    border-color: var(--green-dark);
+  }
+
+  &.banner--status-info {
+    background-color: var(--blue-light);
+    border-color: var(--blue-dark);
+  }
+
+  &.banner--status-warning {
+    background-color: var(--yellow-light);
+    border-color: var(--yellow-dark);
+  }
+
+  &.banner--status-critical {
+    background-color: var(--red-light);
+    border-color: var(--red-dark);
+  }
+}
+
+.banner__dismiss {
+  position: absolute;
+  top: 1em;
+  right: 1rem;
+
+  .banner__dismiss__button {
+    appearance: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+}
+
+.banner__actions {
+  padding-top: 1.5em;
+}

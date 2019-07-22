@@ -1,0 +1,14 @@
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &.list--type-bullet {
+    padding-left: 2em;
+    list-style: disc outside none;
+  }
+
+  &.list--type-number {
+    padding-left: 2em;
+    list-style: decimal outside none;
+  }
+}

@@ -1,0 +1,19 @@
+.text-style--positive {
+  color: var(--green-dark);
+}
+
+.text-style--negative {
+  color: var(--red-dark);
+}
+
+.text-style--strong {
+  font-weight: 700;
+}
+
+.text-style--subdued {
+  color: var(--ink-lighter);
+}
+
+.text-style--code {
+  font-family: var(--font-mono);
+}

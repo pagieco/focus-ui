@@ -1,0 +1,40 @@
+@keyframes skeleton-shimmer {
+  0% {
+    opacity: 0.45;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.skeleton-body-text {
+  backface-visibility: hidden;
+  will-change: opacity;
+  animation: skeleton-shimmer .8s linear infinite alternate;
+}
+
+.skeleton-body-text__line {
+  position: relative;
+  height: 0.75em;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: '';
+    background-color: var(--grey-base);
+    border-radius: var(--border-radius);
+  }
+}
+
+.skeleton-body-text__line + .skeleton-body-text__line {
+  margin-top: 1em;
+}
+
+.skeleton-body-text__line:last-child:not(:first-child) {
+  width: 80%;
+}

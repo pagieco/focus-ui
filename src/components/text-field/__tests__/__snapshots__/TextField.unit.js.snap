@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField matches the snapshot 1`] = `
+<div
+  class="text-input"
+>
+  <inputlabel-stub
+    label="text input"
+  />
+   
+  <input
+    autocomplete="off"
+    tabindex="0"
+    type="text"
+  />
+   
+  <!---->
+</div>
+`;

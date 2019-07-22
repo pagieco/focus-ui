@@ -1,0 +1,16 @@
+.card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--grey-base);
+  border-radius: var(--border-radius);
+}
+
+.card--interactive {
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+}

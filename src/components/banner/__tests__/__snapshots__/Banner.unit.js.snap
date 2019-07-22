@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner matches the snapshot 1`] = `
+<div
+  aria-describedby="BannerContent_null"
+  class="banner banner--status-null"
+  role="status"
+  tabindex="0"
+>
+  <div
+    class="banner__ribbon"
+  />
+   
+  <div
+    class="banner__dismiss"
+  >
+    <button
+      class="banner__dismiss__button"
+    >
+      <icon-stub
+        name="times"
+      />
+    </button>
+  </div>
+   
+  <div>
+    <!---->
+     
+    <div
+      class="banner__content"
+      id="BannerContent_null"
+    >
+       
+      <!---->
+    </div>
+  </div>
+</div>
+`;

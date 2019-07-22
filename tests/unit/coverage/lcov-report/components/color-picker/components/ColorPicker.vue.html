@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/color-picker/components/ColorPicker.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">components/color-picker/components</a> ColorPicker.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>22/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">47.06% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;script&gt;
+&nbsp;
+import tinycolor from 'tinycolor2';
+import { whileMouseMove } from '../../../utilities';
+&nbsp;
+export default {
+  name: 'focus-color-picker',
+&nbsp;
+  props: {
+    /**
+     * Allow the user to select an alpha value.
+     */
+    allowAlpha: {
+      type: Boolean,
+      default: true,
+    },
+&nbsp;
+    /**
+     * The color value.
+     */
+    value: {
+      type: String,
+      default: 'red',
+    },
+&nbsp;
+    /**
+     * The size of the color picker.
+     */
+    pickerSize: {
+      type: Number,
+      default: 160,
+    },
+  },
+&nbsp;
+  data() {
+    return {
+      colorValue: this.value,
+    };
+  },
+&nbsp;
+  computed: {
+    currentColor: {
+      get() {
+        return tinycolor(this.colorValue);
+      },
+&nbsp;
+      set(value) {
+        this.colorValue = tinycolor(value).toRgbString();
+        this.$emit('input', this.colorValue);
+      },
+    },
+&nbsp;
+    saturation() {
+      return `hsl(${this.currentColor.toHsl().h}, 100%, 50%)`;
+    },
+  },
+&nbsp;
+  mounted() {
+    this.updateSaturationDragger();
+    this.updateHueRuler();
+    this.updateAlphaRuler();
+  },
+&nbsp;
+  methods: {
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    handleSaturation(e) {</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      whileMouseMove(e, (internalEvent) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        const saturation = (internalEvent.offsetX / this.pickerSize) * 100;</span>
+<span class="cstat-no" title="statement not covered" >        const brightness = (1 - (internalEvent.offsetY / this.pickerSize)) * 100;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.setSaturation(saturation, brightness);</span>
+<span class="cstat-no" title="statement not covered" >        this.updateSaturationDragger();</span>
+      });
+    },
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    handleHue(e) {</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      whileMouseMove(e, (internalEvent) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        const hue = Math.abs(360 * (-(internalEvent.offsetY * 100 / this.pickerSize) + 100) / 100);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.setHue(hue);</span>
+<span class="cstat-no" title="statement not covered" >        this.updateHueRuler();</span>
+      });
+    },
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    handleAlpha(e) {</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      whileMouseMove(e, (internalEvent) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        const alpha = Math.round((internalEvent.offsetY / this.pickerSize) * 100) / 100;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.setAlpha(alpha);</span>
+<span class="cstat-no" title="statement not covered" >        this.updateAlphaRuler();</span>
+      });
+    },
+&nbsp;
+<span class="fstat-no" title="function not covered" >    setSaturation(saturation, brightness) {</span>
+<span class="cstat-no" title="statement not covered" >      const hsv = this.currentColor.toHsv();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.currentColor = {</span>
+        h: hsv.h,
+        s: saturation,
+        v: brightness,
+        a: hsv.a,
+      };
+    },
+&nbsp;
+<span class="fstat-no" title="function not covered" >    setHue(hue) {</span>
+<span class="cstat-no" title="statement not covered" >      const hsl = this.currentColor.toHsl();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.currentColor = {</span>
+        h: hue,
+        s: hsl.s,
+        l: hsl.l,
+        a: hsl.a,
+      };
+    },
+&nbsp;
+<span class="fstat-no" title="function not covered" >    setAlpha(alpha) {</span>
+<span class="cstat-no" title="statement not covered" >      const hsl = this.currentColor.toHsl();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.currentColor = {</span>
+        h: hsl.h,
+        s: hsl.s,
+        l: hsl.l,
+        a: alpha,
+      };
+    },
+&nbsp;
+    updateSaturationDragger() {
+      const hsv = this.currentColor.toHsv();
+&nbsp;
+      const s = hsv.s * 100;
+      const v = (1 - hsv.v) * 100;
+&nbsp;
+      this.$refs.saturation_dragger.style.top = `calc(${v}% - 5px)`;
+      this.$refs.saturation_dragger.style.left = `calc(${s}% - 5px)`;
+    },
+&nbsp;
+    updateHueRuler() {
+      const hue = this.currentColor.toHsl().h;
+      const y = (-(hue / 360) + 1) * 100;
+&nbsp;
+      this.$refs.hue_ruler.style.top = `${y}%`;
+    },
+&nbsp;
+    updateAlphaRuler() {
+      if (this.allowAlpha) {
+        const alpha = this.currentColor.toHsl().a;
+        const y = alpha * 100;
+&nbsp;
+        this.$refs.alpha_ruler.style.top = `${y}%`;
+      }
+    },
+  },
+};
+&nbsp;
+&lt;/script&gt;
+&nbsp;
+&lt;template&gt;
+  &lt;div class="color-picker" :style="{ '--picker-size': `${pickerSize}px` }"&gt;
+&nbsp;
+    &lt;div class="color-picker-saturation" @mousedown="handleSaturation"&gt;
+      &lt;div class="color-picker-saturation__color" :style="{ '--current-saturation': saturation }"&gt;&lt;/div&gt;
+      &lt;div class="color-picker-saturation__black"&gt;&lt;/div&gt;
+      &lt;div class="color-picker-saturation__dragger" ref="saturation_dragger"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&nbsp;
+    &lt;div class="color-picker-hue" @mousedown="handleHue"&gt;
+      &lt;div ref="hue_ruler" class="color-picker-hue__ruler"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&nbsp;
+    &lt;div class="color-picker-alpha" @mousedown="handleAlpha" v-if="allowAlpha"&gt;
+      &lt;div class="color-picker-alpha__black" :style="{ '--current-color': `#${currentColor.toHex()}` }"&gt;&lt;/div&gt;
+      &lt;div ref="alpha_ruler" class="color-picker-alpha__ruler"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&nbsp;
+  &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;style lang="scss" scoped&gt;
+  .color-picker-saturation__color {
+    background: linear-gradient(to right, white, var(--current-saturation));
+  }
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 22 2019 11:44:07 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@mixin text-container-spacing($spacing: 1.5em) {
+  > * + * {
+    margin-top: $spacing;
+  }
+}
+
+.text-container {
+  @include text-container-spacing;
+}
+
+.text-container--tight {
+  @include text-container-spacing(1em);
+}
+
+.text-container--loose {
+  @include text-container-spacing(2em);
+}

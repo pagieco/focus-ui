@@ -1,0 +1,31 @@
+.frame {
+  display: grid;
+  grid-template-areas: "top-bar top-bar" "navigation main" "footer footer";
+  grid-template-rows: 4em 1fr;
+  grid-template-columns: 20em 1fr;
+  width: 100vw;
+  height: 100vh;
+
+  &.frame--sans-nav {
+    grid-template-areas: "top-bar" "main" "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .frame__top-bar {
+    grid-area: top-bar;
+  }
+
+  .frame__navigation,
+  .frame__main {
+    overflow-y: scroll;
+  }
+
+  .frame__navigation {
+    grid-area: navigation;
+    border-right: 1px solid var(--grey-base);
+  }
+
+  .frame__main {
+    grid-area: main;
+  }
+}

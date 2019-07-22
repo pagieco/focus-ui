@@ -1,0 +1,8 @@
+.popover {
+  z-index: 10;
+  display: none;
+
+  &.popover--is-shown {
+    display: block;
+  }
+}

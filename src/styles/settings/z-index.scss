@@ -1,0 +1,10 @@
+$global-elements: (
+  content: 100,
+  overlay: 400,
+);
+
+$fixed-element-stacking-order: (
+  top-bar: 500,
+  backdrop: 520,
+  modal: 521,
+);

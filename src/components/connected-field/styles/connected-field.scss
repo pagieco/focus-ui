@@ -1,0 +1,33 @@
+.connected-field {
+  position: relative;
+  display: flex;
+
+  .connected-field__item {
+    position: relative;
+    z-index: 10;
+    flex: 0 0 auto;
+  }
+
+  .connected-field__primary {
+    z-index: 20;
+    flex: 1 1 auto;
+  }
+
+  .connected-field__item:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  .connected-field__primary:not(:last-child) * {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .connected-field__item:last-child * {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .connected-field__connection-focussed {
+    z-index: 20;
+  }
+}

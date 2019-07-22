@@ -1,0 +1,19 @@
+.layout__section {
+  max-width: calc(100% - 2em);
+  margin-left: 2em;
+}
+
+.layout__section {
+  flex: 2 2 24rem;
+  min-width: 51%;
+}
+
+.layout__section--secondary,
+.layout__section--one-third {
+  flex: 1 1 21em;
+  min-width: 0;
+}
+
+.layout__section--one-half {
+  min-width: 0;
+}

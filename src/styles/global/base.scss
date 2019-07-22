@@ -1,0 +1,42 @@
+/* stylelint-disable selector-max-type */
+
+html,
+body {
+  @include text-style-body;
+
+  font-family: var(--font-base);
+  color: var(--ink-base);
+}
+
+html {
+  @include alias-text;
+
+  position: relative;
+  font-size: 100%;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+}

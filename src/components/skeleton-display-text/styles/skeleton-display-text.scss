@@ -1,0 +1,45 @@
+@keyframes skeleton-shimmer {
+  0% {
+    opacity: 0.45;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.skeleton-display-text {
+  position: relative;
+  max-width: 12em;
+  backface-visibility: hidden;
+  will-change: opacity;
+  animation: skeleton-shimmer .8s linear infinite alternate;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    background-color: var(--grey-base);
+    border-radius: var(--border-radius);
+  }
+
+  &.skeleton-display-text--size-small {
+    height: 2em;
+  }
+
+  &.skeleton-display-text--size-medium {
+    height: 3em;
+  }
+
+  &.skeleton-display-text--size-large {
+    height: 4em;
+  }
+
+  &.skeleton-display-text--size-x-large {
+    height: 5em;
+  }
+}

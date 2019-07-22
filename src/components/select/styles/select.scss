@@ -1,0 +1,27 @@
+.select-input {
+  position: relative;
+
+  select {
+    position: absolute;
+    z-index: 3000;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0.001;
+  }
+
+  .select-input__content {
+    @include input-base;
+
+    position: relative;
+    z-index: 20;
+    display: flex;
+    background-color: var(--grey-lightest);
+  }
+
+  .select-input__selected-option {
+    flex: 1 1 0%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

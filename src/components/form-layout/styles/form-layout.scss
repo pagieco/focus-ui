@@ -1,0 +1,13 @@
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1em;
+}
+
+.form-group__item {
+  flex: 1 1 1em;
+  min-width: 5em;
+  max-width: calc(100% - 1em);
+  margin-bottom: 1em;
+  margin-left: 1em;
+}

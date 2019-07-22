@@ -1,0 +1,19 @@
+.tooltip {
+  display: inline-block;
+  color: var(--blue);
+  cursor: pointer;
+
+  .tooltip__contents {
+    z-index: 100;
+    display: block;
+    padding: 0.25em 0.5em;
+    color: var(--white);
+    visibility: hidden;
+    background-color: var(--ink-base);
+    border-radius: var(--border-radius);
+  }
+
+  &.tooltip__open .tooltip__contents {
+    visibility: visible;
+  }
+}

@@ -1,0 +1,40 @@
+.navigation__list-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation__list-title {
+  @include text-style-sub-heading;
+
+  padding: 0 0.6em;
+  margin: 1em 0.6em 0.6em;
+  color: var(--ink-lightest);
+}
+
+.navigation__anchor {
+  @include text-style-body;
+
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding: 0 0.6em;
+  margin: 0 0.6em;
+  font-size: 95%;
+  font-weight: 500;
+  color: var(--ink-base);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--blue);
+  }
+}
+
+.navigation__text {
+  flex: 1 1 auto;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  line-height: 1em;
+}

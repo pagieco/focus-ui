@@ -1,0 +1,49 @@
+$thumbnail-sizes: (
+  small: 4em,
+  medium: 6em,
+  large: 8em,
+);
+
+@keyframes skeleton-shimmer {
+  0% {
+    opacity: 0.45;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.skeleton-thumbnail {
+  position: relative;
+  backface-visibility: hidden;
+  will-change: opacity;
+  animation: skeleton-shimmer .8s linear infinite alternate;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    background-color: var(--grey-base);
+    border-radius: var(--border-radius);
+  }
+
+  &.skeleton-thumbnail--small {
+    width: map-get($thumbnail-sizes, small);
+    height: map-get($thumbnail-sizes, small);
+  }
+
+  &.skeleton-thumbnail--medium {
+    width: map-get($thumbnail-sizes, medium);
+    height: map-get($thumbnail-sizes, medium);
+  }
+
+  &.skeleton-thumbnail--large {
+    width: map-get($thumbnail-sizes, large);
+    height: map-get($thumbnail-sizes, large);
+  }
+}

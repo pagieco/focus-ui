@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select matches the snapshot 1`] = `
+<div
+  class="select-input"
+>
+  <!---->
+   
+  <select>
+    <!---->
+     
+  </select>
+   
+  <div
+    class="select-input__content"
+  >
+    <div
+      class="select-input__selected-option"
+    >
+      
+    </div>
+     
+    <div
+      class="select-input__icon"
+    />
+  </div>
+</div>
+`;

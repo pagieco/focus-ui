@@ -1,0 +1,27 @@
+.annotated-section {
+  flex: 1 1 100%;
+  min-width: 0;
+  max-width: calc(100% - 2em);
+  margin-left: 2em;
+}
+
+.annotated-section__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -2rem;
+}
+
+.annotated-section__annotation {
+  flex: 1 1 21em;
+  min-width: 0;
+  max-width: calc(100% - 2em);
+  padding: 2em 2em 2em 0;
+  margin-left: 2em;
+}
+
+.annotated-section__content {
+  flex: 2 2 24em;
+  min-width: 51%;
+  max-width: calc(100% - 2em);
+  margin-left: 2em;
+}

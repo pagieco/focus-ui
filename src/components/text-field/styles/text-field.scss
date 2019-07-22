@@ -1,0 +1,15 @@
+.text-input {
+  position: relative;
+}
+
+.text-input input {
+  @include input-base;
+}
+
+.text-input__char-count {
+  position: absolute;
+  right: 1em;
+  bottom: 0.5em;
+  font-size: .75rem;
+  pointer-events: none;
+}

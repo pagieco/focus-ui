@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardSection matches the snapshot 1`] = `
+<div
+  class="card__section"
+>
+  <!---->
+   
+</div>
+`;

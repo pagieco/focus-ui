@@ -1,0 +1,41 @@
+.data-table__cell {
+  padding: 1em;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: top;
+  border-bottom: 1px solid var(--grey-light);
+}
+
+.data-table__cell--header {
+  font-weight: 400;
+  border-bottom-color: var(--grey-base);
+  border-bottom-width: 2px;
+}
+
+.data-table__cell--first-column {
+  font-weight: 400;
+}
+
+.data-table__cell--total {
+  background-color: var(--grey-lightest);
+  border-bottom-width: 1px;
+}
+
+.data-table__cell--numeric {
+  text-align: right;
+}
+
+.data-table__sort-button {
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.data-table__sort-button-icon {
+  margin-right: 0.5em;
+  font-size: .9em;
+}

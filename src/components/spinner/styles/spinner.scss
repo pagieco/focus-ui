@@ -1,0 +1,28 @@
+.spinner {
+  display: inline-flex;
+  animation: spinner-animation 0.5s linear infinite;
+
+  svg {
+    display: block;
+  }
+
+  path {
+    fill-opacity: 0;
+  }
+
+  .spinner__track {
+    stroke: rgba(0, 0, 0, 0.15);
+  }
+
+  .spinner__head {
+    stroke: white;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.2s cubic-bezier(0.4, 1, 0.75, 0.9);
+    transform-origin: center;
+  }
+
+  @keyframes spinner-animation {
+    0% { transform: rotate(0deg); }
+    to { transform: rotate(1turn); }
+  }
+}

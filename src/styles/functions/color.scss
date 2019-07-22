@@ -1,0 +1,9 @@
+@function color($hue, $value: base) {
+  $fetched-color: map-get(map-get($color-palette, $hue), $value);
+
+  @if type-of($fetched-color) == color {
+    @return $fetched-color;
+  } @else {
+    @error 'Color `#{$hue}` not found.';
+  }
+}

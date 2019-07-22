@@ -1,0 +1,53 @@
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: z-index(top-bar, $fixed-element-stacking-order);
+  display: flex;
+  width: 100%;
+  height: 4em;
+  background-color: var(--ink-base);
+
+  .top-bar__logo-container {
+    display: flex;
+    flex: 0 0;
+    align-items: center;
+    min-width: 20em;
+    height: 100%;
+    padding: 0 0.8em 0;
+  }
+
+  .top-bar__contents {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .top-bar__search {
+    width: 100%;
+    max-width: none;
+    padding-left: var(--page-gutter);
+    margin: 0 0 0 calc((100% - var(--max-page-width)) / 2);
+
+    > * {
+      max-width: 50em;
+    }
+
+    input:not(:focus) {
+      color: var(--white);
+      background: var(--ink-light);
+      border-color: transparent;
+
+      &::placeholder {
+        color: var(--white);
+      }
+    }
+
+    input:focus {
+      box-shadow: 0 0 0 4px var(--ink-light);
+    }
+  }
+}

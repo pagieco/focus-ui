@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPicker matches the snapshot 1`] = `
+<div
+  class="color-picker"
+>
+  <div
+    class="color-picker-saturation"
+  >
+    <div
+      class="color-picker-saturation__color"
+    />
+     
+    <div
+      class="color-picker-saturation__black"
+    />
+     
+    <div
+      class="color-picker-saturation__dragger"
+    />
+  </div>
+   
+  <div
+    class="color-picker-hue"
+  >
+    <div
+      class="color-picker-hue__ruler"
+      style="top: 100%;"
+    />
+  </div>
+   
+  <div
+    class="color-picker-alpha"
+  >
+    <div
+      class="color-picker-alpha__black"
+    />
+     
+    <div
+      class="color-picker-alpha__ruler"
+      style="top: 100%;"
+    />
+  </div>
+</div>
+`;

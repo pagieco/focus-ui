@@ -1,0 +1,17 @@
+.display-text {
+  &.display-text--small {
+    @include text-style-display-small;
+  }
+
+  &.display-text--medium {
+    @include text-style-display-medium;
+  }
+
+  &.display-text--large {
+    @include text-style-display-large;
+  }
+
+  &.display-text--x-large {
+    @include text-style-display-x-large;
+  }
+}

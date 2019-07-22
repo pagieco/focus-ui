@@ -1,0 +1,26 @@
+@mixin input-base {
+  appearance: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  min-height: 2.9em;
+  padding: .75em 1em;
+  font-family: inherit;
+  font-size: .75rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ink-base);
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(white);
+  border: 1px solid var(--grey-dark);
+  border-radius: var(--border-radius);
+  outline: none;
+
+  &:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px var(--blue-light);
+  }
+}
