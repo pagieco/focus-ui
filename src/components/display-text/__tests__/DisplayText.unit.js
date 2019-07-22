@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import { DisplayText } from '../../index';
+import DisplayText from '../components/DisplayText.vue';
 
 const shallowWrap = (propsData = {}) => shallowMount(DisplayText, { propsData });
 

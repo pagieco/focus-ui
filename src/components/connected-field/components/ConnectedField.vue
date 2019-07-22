@@ -8,15 +8,17 @@ export default {
       .connectedRight
       .querySelector('input, select');
 
-    const className = 'connected-field__connection-focussed';
+    if (input) {
+      const className = 'connected-field__connection-focussed';
 
-    input.addEventListener('focus', () => {
-      this.$refs.connectedRight.classList.add(className);
-    });
+      input.addEventListener('focus', () => {
+        this.$refs.connectedRight.classList.add(className);
+      });
 
-    input.addEventListener('blur', () => {
-      this.$refs.connectedRight.classList.remove(className);
-    });
+      input.addEventListener('blur', () => {
+        this.$refs.connectedRight.classList.remove(className);
+      });
+    }
   },
 
   computed: {

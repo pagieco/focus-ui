@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConnectedField matches the snapshot 1`] = `
+<div
+  class="connected-field"
+>
+  <div
+    class="connected-field__item connected-field__primary"
+  />
+   
+  <div
+    class="connected-field__item connected-field__connection"
+  />
+</div>
+`;

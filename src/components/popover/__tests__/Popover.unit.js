@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import { Popover } from '../../index';
+import Popover from '../components/Popover.vue';
 
 const shallowWrap = (propsData = {}) => shallowMount(Popover, { propsData });
 
