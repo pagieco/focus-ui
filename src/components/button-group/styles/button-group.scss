@@ -26,6 +26,10 @@
     margin-left: -1px;
     border-radius: 0;
   }
+
+  .button:last-child {
+    margin-left: -1px;
+  }
 }
 
 .button-group:not(.button-group--segmented) {
