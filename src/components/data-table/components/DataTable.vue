@@ -1,6 +1,7 @@
 <script>
 
 import Cell from './Cell.vue';
+import Footer from './Footer.vue';
 
 export const ContentType = {
   Text: 'text',
@@ -13,7 +14,7 @@ export const SortDirection = {
 };
 
 export default {
-  components: { Cell },
+  components: { Cell, Footer },
 
   props: {
     /**
@@ -127,7 +128,7 @@ export default {
                 :key="headingIndex"
                 :content="heading"
                 :content-type="columnContentTypes[headingIndex]"
-                :sortable="sortable[headingIndex]"
+                :sortable="sortable && sortable[headingIndex]"
                 :header="true"
                 :first-column="headingIndex === 0" />
 
@@ -160,8 +161,7 @@ export default {
       </tbody>
     </table>
 
-    <div class="data-table__footer">
-      {{ footerContent }}
-    </div>
+    <Footer v-if="footerContent" :content="footerContent" />
+
   </div>
 </template>

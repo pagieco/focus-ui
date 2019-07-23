@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataTable matches the snapshot 1`] = `
+<div
+  class="data-table"
+>
+  <table
+    class="data-table__table"
+  >
+    <thead>
+      <tr>
+        <cell-stub
+          content="Product"
+          contenttype="text"
+          firstcolumn="true"
+          header="true"
+          scope="col"
+        />
+        <cell-stub
+          content="Price"
+          contenttype="numeric"
+          header="true"
+          scope="col"
+        />
+        <cell-stub
+          content="Order Number"
+          contenttype="numeric"
+          header="true"
+          scope="col"
+        />
+        <cell-stub
+          content="Quantity"
+          contenttype="numeric"
+          header="true"
+          scope="col"
+        />
+        <cell-stub
+          content="Subtotal"
+          contenttype="numeric"
+          header="true"
+          scope="col"
+        />
+      </tr>
+       
+      <tr />
+    </thead>
+     
+    <tbody>
+      <tr
+        class="data-table__row"
+      >
+        <cell-stub
+          content="[object Object]"
+          contenttype="text"
+          firstcolumn="true"
+        />
+        <cell-stub
+          content="$875.00"
+          contenttype="numeric"
+        />
+        <cell-stub
+          content="124689"
+          contenttype="numeric"
+        />
+        <cell-stub
+          content="140"
+          contenttype="numeric"
+        />
+        <cell-stub
+          content="$122,500.00"
+          contenttype="numeric"
+        />
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <cell-stub
+          content="Navy Merino Wool Blazer with khaki chinos and yellow belt"
+          contenttype="text"
+          firstcolumn="true"
+        />
+        <cell-stub
+          content="$445.00"
+          contenttype="numeric"
+        />
+        <cell-stub
+          content="124518"
+          contenttype="numeric"
+        />
+        <cell-stub
+          content="32"
+          contenttype="numeric"
+        />
+        <cell-stub
+          content="$14,240.00"
+          contenttype="numeric"
+        />
+      </tr>
+      <tr
+        class="data-table__row"
+      >
+        <cell-stub
+          content="Mauve Cashmere Scarf"
+          contenttype="text"
+          firstcolumn="true"
+        />
+        <cell-stub
+          content="$230.00"
+          contenttype="numeric"
+        />
+        <cell-stub
+          content="124533"
+          contenttype="numeric"
+        />
+        <cell-stub
+          content="83"
+          contenttype="numeric"
+        />
+        <cell-stub
+          content="$19,090.00"
+          contenttype="numeric"
+        />
+      </tr>
+    </tbody>
+  </table>
+   
+  <!---->
+</div>
+`;
