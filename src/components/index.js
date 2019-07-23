@@ -87,6 +87,8 @@ export {
   SecondaryActions as SecondaryPageActions,
 } from './page';
 
+export { Pagination } from './pagination';
+
 export {
   default as Popover,
   Placement as PopoverPlacement,
