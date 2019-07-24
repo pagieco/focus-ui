@@ -20,6 +20,10 @@ export {
   CardSection,
 } from './card';
 
+export { Checkbox } from './checkbox';
+
+export { Choice } from './choice';
+
 export { ColorPicker } from './color-picker';
 
 export { ConnectedField } from './connected-field';
@@ -80,6 +84,10 @@ export {
   Item as NavigationItem,
   Section as NavigationSection,
 } from './navigation';
+
+export {
+  default as OptionList,
+} from './option-list';
 
 export {
   default as Page,

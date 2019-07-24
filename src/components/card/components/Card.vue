@@ -22,7 +22,7 @@ export default {
      */
     sectioned: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
 

@@ -1,0 +1,13 @@
+.option-list,
+.option-list__options {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.option-list__title {
+  @include text-style-sub-heading;
+
+  padding: 0.5em 1em;
+  border-bottom: 1px solid var(--grey-base);
+}

@@ -1,0 +1,29 @@
+.option-list__option {
+  width: 100%;
+  font-size: inherit;
+  line-height: inherit;
+
+  &:hover {
+    background: var(--grey-light);
+  }
+}
+
+.option-list__single-option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  appearance: none;
+  padding: 0.5em 1em;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: 0;
+}
+
+.option-list__single-option--selected {
+  background: var(--blue-light);
+}

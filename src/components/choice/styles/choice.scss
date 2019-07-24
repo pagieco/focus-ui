@@ -1,0 +1,28 @@
+.choice {
+  display: inline-flex;
+  justify-content: flex-start;
+  padding: 0.5em 0;
+}
+
+.choice__control {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+}
+
+.choice__control > * {
+  width: 100%;
+}
+
+.choice__label {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 2em;
+  text-transform: none;
+  letter-spacing: normal;
+  -webkit-tap-highlight-color: transparent;
+}
