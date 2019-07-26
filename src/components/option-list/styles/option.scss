@@ -2,6 +2,7 @@
   width: 100%;
   font-size: inherit;
   line-height: inherit;
+  outline: 0;
 
   &:hover {
     background: var(--grey-light);
@@ -21,7 +22,6 @@
   cursor: pointer;
   background: none;
   border: none;
-  outline: 0;
 }
 
 .option-list__single-option--selected {

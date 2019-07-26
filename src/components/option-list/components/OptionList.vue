@@ -1,6 +1,12 @@
 <script>
 
+import { remove } from 'lodash';
+import Checkbox from './Checkbox.vue';
+import Option from './Option.vue';
+
 export default {
+  components: { Checkbox, Option },
+
   props: {
     /**
      * Allow more than one option to be selected.
@@ -53,13 +59,25 @@ export default {
     },
 
     value: {
-      type: [String, Number],
+      type: [String, Number, Array],
     },
   },
 
   methods: {
     selectItem(index) {
       this.$emit('input', index);
+    },
+
+    checkItem({ index, checked }) {
+      let { value } = this;
+
+      if (checked) {
+        value.push(index);
+      } else {
+        value = remove(value, n => n !== index);
+      }
+
+      this.$emit('input', value);
     },
   },
 };
@@ -79,12 +97,19 @@ export default {
             class="option-list__option"
             tabindex="-1"
             :key="optionIndex">
-          <button type="button"
-                  class="option-list__single-option"
-                  :class="{ 'option-list__single-option--selected': value === optionIndex }"
-                  @click="selectItem(optionIndex)">
-            {{ option.label }}
-          </button>
+
+          <Checkbox v-if="allowMultiple"
+                  :index="optionIndex"
+                  :label="option.label"
+                  :selected="value"
+                  @select="checkItem" />
+
+          <Option v-if="!allowMultiple"
+                  :index="optionIndex"
+                  :label="option.label"
+                  :selected="value"
+                  @select="selectItem" />
+
         </li>
 
       </ul>
