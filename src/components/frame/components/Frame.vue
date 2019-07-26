@@ -37,7 +37,8 @@ export default {
       <slot />
     </main>
 
-    <portal-target multiple name="toast" />
-    <portal-target name="modal" />
+    <portal-target class="toast-manager" multiple name="toast" />
+    <portal-target class="modal-manager" name="modal" />
+
   </div>
 </template>
