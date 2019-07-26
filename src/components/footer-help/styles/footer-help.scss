@@ -1,0 +1,30 @@
+.footer-help {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 2em;
+}
+
+.footer-help__content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 1.5em 2em;
+  border: 1px solid var(--grey-base);
+  border-radius: 9999px;
+}
+
+.footer-help__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 1em;
+  font-size: .75em;
+  color: var(--blue);
+  background: white;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+}

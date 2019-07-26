@@ -42,6 +42,8 @@ export {
 
 export { default as Filters } from './filters';
 
+export { FooterHelp } from './footer-help';
+
 export {
   default as Form,
   EncTypes as FormEncTypes,

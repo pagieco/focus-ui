@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelpText matches the snapshot 1`] = `
+<div
+  class="footer-help"
+>
+  <div
+    class="footer-help__content"
+  >
+    <div
+      class="footer-help__icon"
+    >
+      <icon-stub
+        name="question"
+      />
+    </div>
+     
+    <div
+      class="footer-help__text"
+    />
+  </div>
+</div>
+`;
