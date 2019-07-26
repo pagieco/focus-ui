@@ -4,7 +4,7 @@
     "build": "node src/build-utils/build-lib.js",
     "test:unit": "cross-env VUE_APP_TEST=unit vue-cli-service test:unit",
     "test:unit:watch": "cross-env VUE_APP_TEST=unit vue-cli-service test:unit --watch",
-    "docs": "vuepress dev"
+    "docs": "vuepress dev docs"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",

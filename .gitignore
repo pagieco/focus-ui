@@ -5,9 +5,12 @@ Thumbs.db
 # Dependencies
 node_modules/
 
+# Docs
+/docs/components/*.md
+
 # Dev/Build Artifacts
 /dist/
-/coverage/
+/tests/unit/coverage/
 jsconfig.json
 
 # Local Env Files
