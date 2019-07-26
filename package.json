@@ -1,5 +1,4 @@
 {
-  "private": false,
   "scripts": {
     "dev": "node src/build-utils/build-lib.js && vue-cli-service serve",
     "build": "node src/build-utils/build-lib.js",
@@ -71,6 +70,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pagieco/focus-ui/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "homepage": "https://github.com/pagieco/focus-ui#readme"
 }
