@@ -35,6 +35,7 @@
     "normalize.css": "8.0.1",
     "npm-run-all": "4.1.x",
     "popper.js": "^1.15.0",
+    "portal-vue": "^2.1.5",
     "sass": "1.19.x",
     "sass-loader": "7.1.x",
     "stylelint": "^10.0.1",
