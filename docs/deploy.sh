@@ -4,6 +4,8 @@ npm run docs:build
 
 cd docs/.vuepress/dist
 
+cp -a ../../../.circleci .circleci
+
 git init
 git add -A
 git config user.name $GITHUB_USERNAME
