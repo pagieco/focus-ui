@@ -1,5 +1,7 @@
 # [Focus UI](https://focus.pagie.co)
 
+[![CircleCI](https://circleci.com/gh/pagieco/focus-ui/tree/master.svg?style=svg)](https://circleci.com/gh/pagieco/focus-ui/tree/master)
+
 Our design system helps us work together to build a great experience for all of Pagie's users.
 
 ## Using the Vue components
