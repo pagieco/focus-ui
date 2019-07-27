@@ -10,6 +10,6 @@ git config user.name $GITHUB_USERNAME
 git config user.email $GITHUB_EMAIL
 git commit -m 'ci docs update'
 
-git push --force --quiet $CIRCLE_REPOSITORY_URL master:gh-pages
+git push --force --quiet git@github.com:pagieco/focus-ui.git master:gh-pages
 
 cd -
