@@ -47,9 +47,14 @@ jobs:
 workflows:
   version: 2
   test_and_deploy:
-    branches:
-      only:
-        - master
     jobs:
-      - test
-      - docs
+      - test:
+        filters:
+          branches:
+            only: master
+      - docs:
+        requires:
+          - test
+        filters:
+          branches:
+            only: master
