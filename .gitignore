@@ -7,6 +7,7 @@ node_modules/
 
 # Docs
 /docs/components/*.md
+/docs/.vuepress/dist/
 
 # Dev/Build Artifacts
 /dist/
