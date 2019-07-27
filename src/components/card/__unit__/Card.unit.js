@@ -1,8 +1,9 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount, shallowMount } from '@vue/test-utils';
 import Card from '../components/Card.vue';
 import CardSection from '../components/CardSection.vue';
 
 const shallowWrap = propsData => shallowMount(Card, { propsData });
+const wrap = propsData => mount(Card, { propsData });
 
 describe('Card', () => {
   it('is a valid vue component', () => {
@@ -25,7 +26,7 @@ describe('Card', () => {
   });
 
   it('uses the sectioned prop', () => {
-    const wrapper = shallowMount(Card);
+    const wrapper = wrap({ sectioned: true });
 
     expect(wrapper.contains(CardSection)).toBeTruthy();
 
