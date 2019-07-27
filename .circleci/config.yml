@@ -35,8 +35,18 @@ jobs:
       - store_artifacts:
           path: tests/unit/coverage
 
+  docs:
+    <<: *vm_settings
+    steps:
+      - checkout
+      - restore_cache: *install_restore_cache
+      - run: *install_run
+      - save_cache: *install_save_cache
+      - run: sh ./docs/deploy.sh
+
 workflows:
   version: 2
   test_and_deploy:
     jobs:
       - test
+      - docs
