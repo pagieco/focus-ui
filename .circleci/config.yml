@@ -46,15 +46,13 @@ jobs:
 
 workflows:
   version: 2
-  test_and_deploy:
+  test_and_docs:
     jobs:
       - test:
-        filters:
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master
       - docs:
-        requires:
-          - test
-        filters:
-          branches:
-            only: master
+          filters:
+            branches:
+              only: master
