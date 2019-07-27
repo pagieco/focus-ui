@@ -9,13 +9,13 @@ Our design system helps us work together to build a great experience for all of 
 Run the following command using [npm](https://www.npmjs.com/):
 
 ```bash
-npm install @pagieco/focus-ui --save
+npm install @pagie/focus-ui --save
 ```
 
 If you prefer [Yarn](https://yarnpkg.com/en/), use the following command instead:
 
 ```bash
-yarn add @pagieco/focus-ui
+yarn add @pagie/focus-ui
 ```
 
 ##
