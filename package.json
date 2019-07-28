@@ -55,7 +55,7 @@
   },
   "name": "@pagie/focus-ui",
   "description": "Our design system helps us work together to build a great experience for all of Pagie's users.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "directories": {
     "test": "tests"
