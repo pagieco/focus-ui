@@ -79,7 +79,8 @@ export default {
         :action="action"
         :accept-charset="acceptCharset"
         :autocomplete="formAutocomplete"
-        :enctype="formEnctype">
+        :enctype="formEnctype"
+        v-on="$listeners">
     <slot />
   </form>
 </template>
