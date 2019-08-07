@@ -127,6 +127,8 @@ export {
 
 export { Thumbnail } from './thumbnail';
 
+export { Toast } from './toast';
+
 export {
   default as Tooltip,
   Placement as TooltipPlacement,
