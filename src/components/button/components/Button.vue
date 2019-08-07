@@ -110,6 +110,8 @@ export default {
     },
   },
 
+  inheritAttrs: false,
+
   computed: {
     classList() {
       return filterClassList([
