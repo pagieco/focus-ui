@@ -108,6 +108,13 @@ export default {
     url: {
       type: String,
     },
+
+    /**
+     * Denotes the target route of the link.
+     */
+    to: {
+      type: [String, Object],
+    },
   },
 
   inheritAttrs: false,
@@ -132,45 +139,55 @@ export default {
     buttonType() {
       return this.submit ? 'submit' : 'button';
     },
-
-    anchorAttrs() {
-      return {
-        id: this.id,
-        href: this.url,
-        'aria-label': this.ariaLabel,
-        'aria-controls': this.ariaControls,
-        'aria-expanded': this.ariaExpanded,
-        'aria-disabled': this.isDisabled,
-        target: this.external ? '_blank' : null,
-        disabled: this.isDisabled,
-        tabindex: 0,
-      };
-    },
-
-    buttonAttrs() {
-      return {
-        role: 'button',
-        type: this.buttonType,
-        id: this.id,
-        'aria-label': this.ariaLabel,
-        'aria-controls': this.ariaControls,
-        'aria-expanded': this.ariaExpanded,
-        'aria-disabled': this.isDisabled,
-        disabled: this.isDisabled,
-        tabindex: 0,
-      };
-    },
   },
 
   render(h) {
-    const isAnchor = this.url !== undefined;
-
     const label = h('span', { class: 'button__label' }, [
       this.$slots.default,
     ]);
 
-    return h(isAnchor ? 'a' : 'button', {
-      attrs: isAnchor ? this.anchorAttrs : this.buttonAttrs,
+    const defaultAttrs = {
+      id: this.id,
+      'aria-label': this.ariaLabel,
+      'aria-controls': this.ariaControls,
+      'aria-expanded': this.ariaExpanded,
+      'aria-disabled': this.isDisabled,
+      target: this.external ? '_blank' : null,
+      disabled: this.isDisabled,
+      tabindex: 0,
+    };
+
+    // Render a normal anchor element.
+    if (this.url !== undefined) {
+      return h('a', {
+        attrs: {
+          ...defaultAttrs,
+          href: this.url,
+        },
+        class: this.classList,
+        on: this.$listeners,
+      }, [label, this.loading ? h(Spinner) : null]);
+    }
+
+    // Render a router-link component.
+    if (this.to !== undefined) {
+      return h('router-link', {
+        attrs: {
+          ...defaultAttrs,
+          to: this.to,
+        },
+        class: this.classList,
+        on: this.$listeners,
+      }, [label, this.loading ? h(Spinner) : null]);
+    }
+
+    // Render a normal button element.
+    return h('button', {
+      attrs: {
+        ...defaultAttrs,
+        role: 'button',
+        type: this.buttonType,
+      },
       class: this.classList,
       on: this.$listeners,
     }, [label, this.loading ? h(Spinner) : null]);

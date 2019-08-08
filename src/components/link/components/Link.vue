@@ -20,18 +20,37 @@ export default {
     url: {
       type: String,
     },
+
+    /**
+     * Denotes the target route of the link.
+     */
+    to: {
+      type: [String, Object],
+    },
   },
 
   render(h) {
-    const attrs = { href: this.url };
+    const attrs = {};
 
     if (this.external) {
       attrs.target = '_blank';
       attrs.rel = 'noopener noreferrer';
     }
 
+    // Render a router-link component.
+    if (this.to !== undefined) {
+      return h('router-link', {
+        attrs: { ...attrs, to: this.to },
+        class: ['link'],
+      }, [
+        this.$slots.default,
+        this.getIcon(h),
+      ]);
+    }
+
+    // Render a normal anchor element.
     return h('a', {
-      attrs,
+      attrs: { ...attrs, href: this.href },
       class: ['link'],
     }, [
       this.$slots.default,
