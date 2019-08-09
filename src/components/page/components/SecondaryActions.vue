@@ -5,14 +5,23 @@ import { ButtonGroup } from '../../button-group';
 
 export default {
   components: { Button, ButtonGroup },
+
+  props: {
+    actions: {
+      type: Array,
+    },
+  },
 };
 
 </script>
 
 <template>
   <ButtonGroup>
-    <Button small>Print</Button>
-    <Button small>Unarchive</Button>
-    <Button small>Cancel order</Button>
+    <Button small
+        v-for="(action, actionIndex) in actions"
+        v-bind="{ ...action }"
+        :key="actionIndex">
+      {{ action.content }}
+    </Button>
   </ButtonGroup>
 </template>

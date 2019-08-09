@@ -23,6 +23,10 @@ export default {
       type: Object,
     },
 
+    secondaryActions: {
+      type: Array,
+    },
+
     // Page title, in large type.
     title: {
       type: String,
@@ -58,8 +62,8 @@ export default {
         </div>
       </div>
 
-      <div class="page-header__secondary-actions">
-        <HeaderSecondaryActions />
+      <div class="page-header__secondary-actions" v-if="secondaryActions">
+        <HeaderSecondaryActions :actions="secondaryActions" />
       </div>
 
     </div>
