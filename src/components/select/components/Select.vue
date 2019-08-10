@@ -86,6 +86,11 @@ export default {
 
       if (el && el.selectedIndex > -1) {
         this.selectedOption = el.options[el.selectedIndex].text;
+
+        this.$emit('change', {
+          index: el.selectedIndex,
+          value: this.selectedOption,
+        });
       }
     },
   },
