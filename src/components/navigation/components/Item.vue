@@ -22,7 +22,7 @@ export default {
 
 <template>
   <li class="navigation__item">
-    <a :href="url" class="navigation__anchor" v-if="url">
+    <a :href="url" class="navigation__anchor" v-if="!to">
       <span class="navigation__text">
         {{ label }}
       </span>
